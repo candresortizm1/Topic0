@@ -4,8 +4,8 @@ public abstract class Process {
     private int size = 0;
     private String name = "";
 
-    public void setName(String process_name, int process_number) {
-        name = process_name+String.format("%03d", process_number);
+    public void setName(String processName, int processNumber) {
+        name = processName+String.format("%03d", processNumber);
     }
 
     public String getName() {
@@ -16,8 +16,8 @@ public abstract class Process {
         return size;
     }
 
-    public void setSize(int min_size, int max_size){
-        size = (int) (Math.random() * (max_size - min_size)) + min_size;
+    public void setSize(int minSize, int maxSize){
+        size = (int) (Math.random() * (maxSize - minSize)) + minSize;
     };
 
 }

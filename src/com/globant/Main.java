@@ -29,15 +29,15 @@ public class Main {
 
     }
 
-    private static void addProcess(Memory memory,String process_type){
-        Process new_pr;
-        if (process_type.equals("s")){
-            new_pr = new SystemProcess();
+    private static void addProcess(Memory memory,String processType){
+        Process newProcess;
+        if (processType.equals("s")){
+            newProcess = new SystemProcess();
         }else{
-            new_pr = new ApplicationProcess();
+            newProcess = new ApplicationProcess();
         }
         try {
-            memory.addProcess(process_type,new_pr);
+            memory.addProcess(processType,newProcess);
         }catch (MemoryOverflowException me){
             System.out.println("************************************************");
             System.out.println("*****************MEMORIA LLENA******************");
